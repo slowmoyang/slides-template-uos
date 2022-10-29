@@ -1,13 +1,13 @@
-THESIS=main
+NAME=main
 
 .PHONY: clean
 
-all: $(THESIS).pdf
+all: $(NAME).pdf
 
-$(THESIS).pdf: $(THESIS).tex
+$(NAME).pdf: $(NAME).tex
 	@mkdir -vp build
-	latexmk -bibtex -pdf -pdflatex="pdflatex -interactive=nonstopmode -shell-escape" -use-make $< -jobname=./build/$(THESIS)
+	latexmk -bibtex -pdf -pdflatex="lualatex -shell-escape -interactive=nonstopmode" -use-make $< -jobname=./build/$(NAME)
 
 clean:
-	latexmk -C -jobname=./build/$(THESIS)
+	latexmk -C -jobname=./build/$(NAME)
 	rm -vf ./build/*
