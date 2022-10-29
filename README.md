@@ -1,1 +1,1 @@
-# Metropolis + UoS colorscheme
+# Metropolis + UOS colorscheme
