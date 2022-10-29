@@ -1,0 +1,49 @@
+\documentclass[10pt]{beamer}
+
+%% metropolis + uos
+\usepackage{uos}
+\usepackage{appendixnumberbeamer}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{minted}
+% \usepackage{emoji}
+
+%% more setup
+\hypersetup{colorlinks,linkcolor=uosblue,urlcolor=uosblue}
+% \setemojifont{TwemojiMozilla}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{title}
+\subtitle{subtitle}
+
+\author{Seungjin Yang}
+\institute[VFU]{University of Seoul}
+\date{\today}
+
+% logo
+\titlegraphic{
+   \hfill
+   \includegraphics[width=2cm]{fig/uos/logo_vertical.pdf}
+   %\includegraphics[width=1.1cm]{fig/cms/CMSlogo_outline_black_label_May2014.pdf}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[noframenumbering,plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents%[hideallsubsections]
+\end{frame}
+
+\section{my first section}
+
+\begin{frame}[fragile]{Introduction}
+    TODO
+\end{frame}
+
+\end{document}
