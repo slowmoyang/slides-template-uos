@@ -13,3 +13,4 @@ clean:
 
 cleanall:
 	rm -vf ./build/*
+	@rm -vrf ./_minted-.
