@@ -2,24 +2,35 @@
 
 %% metropolis + uos
 \usepackage{uos}
+%%
 \usepackage{appendixnumberbeamer}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{minted}
-\usepackage{emoji}
+\usepackage{import}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{comment}
+\usepackage{lipsum}
+%%% https://tug.org/FontCatalogue/firasanslight/
+\usepackage[sfdefault,light]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+%% texmf
+\usepackage{heppennames2}
+\usepackage{ptdr-definitions}
+\usepackage{ohmyslides}
 
-%% more setup
+%% setup
 \hypersetup{colorlinks,linkcolor=uosblue,urlcolor=uosblue}
-\setemojifont{TwemojiMozilla}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{title}
+\title{Zero-Permutation Jet-Parton Assignment using Self-Attention Mechanism and Search for Supersymmetry with Compressed Mass Spectrum with the CMS Experiment}
 \subtitle{subtitle}
 
 \author{Seungjin Yang}
 \institute[VFU]{University of Seoul}
-\date{\today}
+\date{December 14, 2022}
 
 % logo
 \titlegraphic{
@@ -40,10 +51,19 @@
   \tableofcontents%[hideallsubsections]
 \end{frame}
 
-\section{my first section}
-
 \begin{frame}[fragile]{Introduction}
-  \emoji{fire}
+  gentle intro
 \end{frame}
+
+\section{Search for Supersymmetry with Compressed Mass Spectrum with the CMS Experiment}
+\subimport{tex/susy}{main.tex}
+
+\section{Zero-Permutation Jet-Parton Assignment using Self-Attention Mechanism}
+\subimport{tex/saja}{main.tex}
+
+\section{Additional Works}
+\subimport{tex/qgjets}{main.tex}
+\subimport{tex/gem-eff}{main.tex}
+\subimport{tex/ge0-seg}{main.tex}
 
 \end{document}
