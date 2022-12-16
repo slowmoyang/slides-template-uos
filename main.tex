@@ -1,8 +1,8 @@
+\RequirePackage[dvipsnames]{xcolor}
 \documentclass[10pt]{beamer}
 
 %% metropolis + uos
 \usepackage{uos}
-
 
 %%
 \usepackage{appendixnumberbeamer}
@@ -14,6 +14,8 @@
 \usepackage{subcaption}
 \usepackage{comment}
 \usepackage{lipsum}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ulem}
 %%% https://tug.org/FontCatalogue/firasanslight/
 \usepackage[sfdefault,light]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
 \usepackage[T1]{fontenc}
@@ -28,7 +30,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Zero-Permutation Jet-Parton Assignment using Self-Attention Mechanism and Search for Supersymmetry with Compressed Mass Spectrum with the CMS Experiment}
-\subtitle{subtitle}
+\subtitle{PhD Defence}
 
 \author{Seungjin Yang}
 \institute[VFU]{University of Seoul}
@@ -37,8 +39,8 @@
 % logo
 \titlegraphic{
    \hfill
-   \includegraphics[width=2cm]{fig/uos/logo_vertical.pdf}
-   %\includegraphics[width=1.1cm]{fig/cms/CMSlogo_outline_black_label_May2014.pdf}
+   \includegraphics[width=1.5cm]{fig/uos/logo_vertical.pdf}
+   \includegraphics[width=cm]{fig/cms/CMSlogo_outline_black_label_May2014.pdf}
 }
 
 \begin{document}
@@ -53,10 +55,6 @@
   \tableofcontents%[hideallsubsections]
 \end{frame}
 
-\begin{frame}[fragile]{Introduction}
-  gentle intro
-\end{frame}
-
 \section{Search for Supersymmetry with Compressed Mass Spectrum with the CMS Experiment}
 \subimport{tex/susy}{main.tex}
 
@@ -65,7 +63,16 @@
 
 \section{Additional Works}
 \subimport{tex/qgjets}{main.tex}
-\subimport{tex/gem-eff}{main.tex}
-\subimport{tex/ge0-seg}{main.tex}
+\subimport{tex/gem}{main.tex}
+
+{\setbeamercolor{palette primary}{fg=white, bg=uosblue}
+\begin{frame}[standout]
+  THANKS!
+\end{frame}
+}
+
+\appendix
+\subimport{tex/susy}{backup.tex}
+\subimport{tex/saja}{backup.tex}
 
 \end{document}

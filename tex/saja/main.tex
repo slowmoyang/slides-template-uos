@@ -3,6 +3,28 @@
 \makeatother
 
 \begin{frame}[fragile]{Introduction}
+  \begin{columns}
+
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Zero-Permutation Jet-Parton Assignment using a Self-Attention Network
+        \item \href{https://doi.org/10.48550/arXiv.2012.03542}{arXiv:2012.03542} (\href{https://inspirehep.net/literature/1835305}{12 citations})
+        \item \href{https://pos.sissa.it/390/348}{Presented in the oral session at International Conference on High Energy Physics 2020}
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[htpb]
+        \centering
+        \includegraphics[height=0.48\textheight]{fig/publication/2012.03542.pdf}
+      \end{figure}
+      
+    \end{column}
+
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Introduction}
 \begin{columns}
     \column{0.65\textwidth}
     \begin{itemize}
@@ -16,6 +38,10 @@
                        fully-hadronic \ttbar events to test the performance.
     \end{itemize}
     \column{0.35\textwidth}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=0.8\textwidth]{fig/ttbar.png}
+    \end{figure}
 \end{columns}
 \end{frame}
 
@@ -309,37 +335,6 @@
   
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Benchmark: Kinematic Likelihood Fitting}
-  \begin{itemize}
-    \item[$\bullet$]
-        Kinematic likelihood fitting is performed as a baseline study,
-        the \href{https://github.com/KLFitter/KLFitter}{\textsc{KLFitter}} library is used.
-        {\scriptsize \href{https://www.sciencedirect.com/science/article/pii/S0168900214001855?via\%3Dihub}{[J. Erdmann, Nucl.Instrum.Meth.A 748 (2014) 18-25]}}
-        \scalebox{.7}{$
-            \mathcal{L} = B(m_{q_{1}q_{2}q_{3}}|m_{t},\Gamma_{t}) \cdot
-                         B(m_{q_{1}q_{2}}|m_{W},\Gamma_{W}) \cdot
-                         B(m_{q_{4}q_{5}q_{6}}|m_{t},\Gamma_{t}) \cdot
-                         B(m_{q_{4}q_{5}}|m_{W},\Gamma_{W}) \cdot
-                         \prod_{i=1}^{6} W_{\text{jet}}(E_{\text{jet},i}^{\text{meas}}|E_{\text{jet},i})
-        $},
-        {\footnotesize where $B$ indicates the Breit-Wigner distribution and $W$ does the the transfer functions}
-    \smallskip
-
-    \item[$\bullet$]
-        As more jets are used, the number of permutations increases explosively.
-        Therefore, two case are studied.
-              \begin{itemize}
-                  \item[-] Most energetic 6 jets, $N_{jets}^{in} = 6 \rightarrow $ Avg. 18 permutations
-                  \item[-] Up to 7 most energetic jets $N_{jets}^{in} \leq 7 \rightarrow$  Avg. 126 permutations
-              \end{itemize}
-    \smallskip
-
-    \item[$\bullet$]
-        When the best permutation has a likelihood lower than the threshold, the event is not selected.
-  \end{itemize}
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Performance}
@@ -363,9 +358,9 @@
     \column{0.37\textwidth}
       \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{fig/roc/roc_wrong-rej_vs_correct.pdf}
-        \includegraphics[width=\textwidth]{fig/roc/roc_unmathed-rej_vs_correct.pdf}
-        \includegraphics[width=\textwidth]{fig/roc/roc_qcd_rej_vs_correct.pdf}
+        \includegraphics[height=0.32\textheight]{fig/roc/roc_wrong-rej_vs_correct.pdf}
+        \includegraphics[height=0.32\textheight]{fig/roc/roc_unmathed-rej_vs_correct.pdf}
+        \includegraphics[height=0.32\textheight]{fig/roc/roc_qcd_rej_vs_correct.pdf}
       \end{figure}
   \end{columns}
 \end{frame}
@@ -387,11 +382,10 @@
   }
 \end{frame}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Summary}
   \begin{itemize}
-    \item[$\bullet$] We introduce \textsc{SaJa}\, network for jet-parton assignment without jet permutations.
+    \item[$\bullet$] \textsc{SaJa}\, network for jet-parton assignment without jet permutations.
     \item[$\bullet$] \textsc{SaJa}\, shows better jet-parton assignment and background rejection performance compared to \textsc{KLFitter}.
     \item[$\bullet$] Predictive entropy makes it possible to improve performance without additional training.
   \end{itemize}
